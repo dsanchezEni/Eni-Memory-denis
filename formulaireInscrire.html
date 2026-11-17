@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ENI-MEMORY-Inscription</title>
+</head>
+<body>
+    <h1>ENI - <span>MEMORY</span> - Inscription <span id="audioContainer"></span></h1>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="formulaireInscrire.html">S'inscrire</a></li>
+            <li><a href="formulaireConnecter.html">Se connecter</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="jouer.html">Jouer</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <form>
+            <div class="input-group">
+                <label for="user">Nom d'utilisateur</label>
+                <div class="icon-input-container">
+                    <input type="text" id="user" placeholder="Votre nom" />
+                    <img class="icone-verif" src="ressources/error.svg" />
+                </div>
+                <p class="error-msg">Le nom doit contenir au moins 3 caractères</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Email</label>
+                <div class="icon-input-container">
+                    <input type="email" id="email" placeholder="votre@email.com" />
+                    <img class="icone-verif" src="ressources/error.svg" />
+                </div>
+                <p class="error-msg">Veuillez saisir un email valide</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <div class="icon-input-container">
+                    <input type="password" id="password" placeholder="Votre mot de passe" />
+                    <img class="icone-verif" src="ressources/error.svg" />
+                </div>
+                <div class="lines">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <p class="error-msg">Le mot de passe doit contenir au moins 6 caractères, un symbole et un chiffre</p>
+            </div>
+            
+            <div class="input-group">
+                <label for="confirmPassword">Confirmer le mot de passe</label>
+                <div class="icon-input-container">
+                    <input type="password" id="confirmPassword" placeholder="Confirmez votre mot de passe" />
+                    <img class="icone-verif" src="ressources/error.svg" />
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="age">Âge</label>
+                <div class="icon-input-container">
+                    <input type="number" id="age" min="13" max="120" placeholder="Votre âge" />
+                    <img class="icone-verif" src="ressources/error.svg" />
+                </div>
+                <p class="error-msg">Vous devez avoir au moins 13 ans</p>
+            </div>
+            
+            <div class="bouton">
+                <button type="submit">S'inscrire</button>
+            </div>
+            
+            <p>Déjà un compte ? <a href="formulaireConnecter.html">Se connecter</a></p>
+        </form>
+    </div>
+    
+    <script src="js/audio.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

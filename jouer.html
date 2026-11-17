@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ENI-MEMORY-Jouer</title>
+</head>
+<body>
+    <!-- Vérification de connexion -->
+    <script>
+        if (!localStorage.getItem('utilisateurEmail')) {
+            window.location.href = 'formulaireConnecter.html';
+        }
+    </script>
+    
+    <h1>ENI - <span>MEMORY</span> - Jouer <span id="audioContainer"></span></h1>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="formulaireInscrire.html">S'inscrire</a></li>
+            <li><a href="formulaireConnecter.html">Se connecter</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="jouer.html">Jouer</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+    <aside>
+      <h2>Derniers meilleurs scores : </h2>
+      <div id="zoneMeilleureScore">
+        <table id="tableScore" class="meilleureScore">
+          <tr><th>Pseudo</th><th>Score</th><th>Temps</th><th>Taille</th><th>Choix Memory</th><th>Date</th></tr>
+          <tr><td colspan="6">Pas encore de score enregistré</td></tr>
+        </table>
+      </div>
+    </aside>
+    
+    
+    <p class="advice">Tentez de gagner avec le moins d'essais possible.</p>
+    <p class="advice">Appuyez sur la <strong>barre d'espace</strong> pour relancer le jeu.</p>
+    <div class="score">Nombre de coups : 0</div>
+    <div class="score" id="timer">Temps : 0:00</div>
+
+    <div class="grid" id="memoryGrid"></div>
+  </div>
+
+  <script src="js/audio.js"></script>
+  <script src="js/card.js"></script>
+</body>
+</html>
