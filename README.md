@@ -10,7 +10,7 @@
 
 ### 🎮 **Fonctionnalités de base du jeu**
 - ✅ **Jeu Memory complet** : Retournez les cartes pour trouver les paires correspondantes
-- ✅ **Grille dynamique** : Génération automatique de la grille selon la taille sélectionnée (4x4, 6x6, 8x8)
+- ✅ **Grille dynamique** : Génération automatique de la grille selon la taille sélectionnée (3x3, 4x3, 5x5)
 - ✅ **Système de scoring** : Calcul des scores basés sur le nombre de coups et le temps
 - ✅ **Timer** : Chronomètre pour mesurer le temps de jeu
 - ✅ **Animation 3D** : Effets de retournement de carte fluides et réalistes
@@ -210,8 +210,8 @@ Le jeu s'adapte automatiquement à différents types d'écrans :
 
 ## 📊 Statistiques et Métriques
 
-- **Nombre total de cartes** : Variable selon la taille (16, 36 ou 64 cartes)
-- **Nombre de paires** : 8, 18 ou 32 paires
+- **Nombre total de cartes** : Variable selon la taille (8, 12 ou 30 cartes)
+- **Nombre de paires** : 8, 12 ou 30 paires
 - **Temps moyen** : Variable selon la difficulté et l'utilisateur
 - **Meilleur score possible** : Théoriquement égal au nombre minimal de coups × 2
 
@@ -272,7 +272,6 @@ Le jeu s'adapte automatiquement à différents types d'écrans :
 
 ## 📄 Documentation Complémentaire
 
-- [Recommandations d'amélioration](documents/recommandations.md) - Liste complète des améliorations possibles
 - [Documentation technique](documents/) - Détails d'implémentation
 
 ---
