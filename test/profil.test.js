@@ -127,7 +127,7 @@ module.exports = (t) => {
     const rows = sb.tableEl.dataRows();
     t.eq(rows.length, 2, 'uniquement les parties de l\'utilisateur connecté');
     // plus récentes d'abord
-    t.eq(rows[0].cells[4].getText(), 'legumes');
+    t.eq(rows[0].cells[4].getText(), 'Légumes', 'nomAffiche affiché');
     t.eq(rows[0].cells[2].getText(), '-', 'ancien score sans temps');
     t.includes(rows[0].cells[5].getText(), '01/01/2024', 'la dernière partie enregistrée en premier');
     t.eq(rows[1].cells[2].getText(), '1:25');
@@ -146,9 +146,7 @@ module.exports = (t) => {
   t.test('verifierConnexion redirige vers le formulaire de connexion', () => {
     const sb = createSandbox(); // pas d'utilisateurEmail
     chargerProfil(sb);
-    sb.run('__api ? null : null');
-    sb.loadScript('js/profil.js', 'globalThis.__verif = verifierConnexion;');
-    sb.run('__verif()');
+    sb.run('verifierConnexion()');
     t.includes(sb.navigations.join(','), 'formulaireConnecter.html');
   });
 };

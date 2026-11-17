@@ -160,10 +160,13 @@ function createSandbox({ localStorage = {}, selectors = {} } = {}) {
       location: {
         get href() { return navigations[navigations.length - 1] || ''; },
         set href(dest) { navigations.push(dest); },
+        reload() { navigations.push("reload"); },
       },
       reload() { navigations.push('reload'); },
     },
     TextEncoder,
+    setInterval: () => 0,
+    clearInterval: () => {},
     Date,
     crypto: require('node:crypto').webcrypto,
   };
